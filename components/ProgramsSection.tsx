@@ -189,7 +189,7 @@ export default function ProgramsSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="btn-primary"
+            className="btn-primary text-base px-8 py-3.5"
           >
             View All Programs
             <ArrowRight className="w-4 h-4" />

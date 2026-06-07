@@ -147,7 +147,7 @@ export default function JoinUsSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-primary"
+              className="btn-primary text-base px-8 py-3.5"
             >
               Quick Volunteer Sign-up
               <ArrowRight className="w-4 h-4" />
@@ -155,7 +155,7 @@ export default function JoinUsSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
-              className="btn-secondary"
+              className="btn-secondary text-base px-8 py-3.5"
             >
               Schedule a Call
             </motion.button>

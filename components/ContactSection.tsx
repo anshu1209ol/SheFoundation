@@ -281,7 +281,7 @@ export default function ContactSection() {
                       disabled={status === 'loading'}
                       whileHover={status !== 'loading' ? { scale: 1.02 } : {}}
                       whileTap={status !== 'loading' ? { scale: 0.98 } : {}}
-                      className="btn-primary w-full justify-center disabled:opacity-70 disabled:cursor-not-allowed"
+                      className="btn-primary w-full justify-center py-3.5 px-6 text-base disabled:opacity-70 disabled:cursor-not-allowed"
                     >
                       {status === 'loading' ? (
                         <>

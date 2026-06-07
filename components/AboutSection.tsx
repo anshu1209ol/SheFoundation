@@ -126,7 +126,7 @@ export default function AboutSection() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="btn-primary group"
+                className="btn-primary text-base px-8 py-3.5 group"
               >
                 Learn More About Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

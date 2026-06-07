@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* ─── CSS Variables ─────────────────────────────────────────── */
 :root {
@@ -128,12 +126,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 14px 32px;
   background: linear-gradient(135deg, var(--pink) 0%, var(--purple) 100%);
   color: white;
   border-radius: 50px;
   font-weight: 600;
-  font-size: 15px;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -175,12 +171,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 13px 32px;
   background: transparent;
   color: var(--pink);
   border-radius: 50px;
   font-weight: 600;
-  font-size: 15px;
   border: 2px solid var(--pink);
   cursor: pointer;
   overflow: hidden;

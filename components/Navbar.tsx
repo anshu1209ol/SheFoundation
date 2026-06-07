@@ -72,55 +72,59 @@ export default function Navbar() {
         }`}
       >
         <div className="container-custom flex items-center justify-between">
-          {/* Logo */}
-          <motion.a
-            href="#home"
-            onClick={(e) => { e.preventDefault(); scrollTo('#home'); }}
-            className="flex items-center gap-3 group"
-            whileHover={{ scale: 1.03 }}
-          >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center shadow-lg group-hover:shadow-pink-200 transition-shadow">
-              <Heart className="w-5 h-5 text-white fill-white" />
-            </div>
-            <div>
-              <div className="font-bold text-lg gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                She Can
+          {/* Logo container */}
+          <div className="w-auto md:w-1/4 flex justify-start">
+            <motion.a
+              href="#home"
+              onClick={(e) => { e.preventDefault(); scrollTo('#home'); }}
+              className="flex items-center gap-3 group"
+              whileHover={{ scale: 1.03 }}
+            >
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-purple-500 flex items-center justify-center shadow-lg group-hover:shadow-pink-200 transition-shadow">
+                <Heart className="w-5 h-5 text-white fill-white" />
               </div>
-              <div className="text-xs font-semibold tracking-widest uppercase opacity-60 leading-none" style={{ fontSize: '9px' }}>
-                Foundation
+              <div>
+                <div className="font-bold text-lg gradient-text" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                  She Can
+                </div>
+                <div className="text-xs font-semibold tracking-widest uppercase opacity-60 leading-none" style={{ fontSize: '9px' }}>
+                  Foundation
+                </div>
               </div>
-            </div>
-          </motion.a>
+            </motion.a>
+          </div>
 
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => {
-              const isActive = activeSection === link.href.replace('#', '');
-              return (
-                <li key={link.href}>
-                  <button
-                    onClick={() => scrollTo(link.href)}
-                    className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
-                      isActive
-                        ? 'text-pink-500'
-                        : 'opacity-70 hover:opacity-100 hover:text-pink-500'
-                    }`}
-                  >
-                    {link.label}
-                    {isActive && (
-                      <motion.div
-                        layoutId="nav-indicator"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500"
-                      />
-                    )}
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+          {/* Desktop nav container */}
+          <div className="hidden md:flex md:w-1/2 md:justify-center">
+            <ul className="flex items-center gap-6">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.replace('#', '');
+                return (
+                  <li key={link.href}>
+                    <button
+                      onClick={() => scrollTo(link.href)}
+                      className={`relative px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                        isActive
+                          ? 'text-pink-500'
+                          : 'opacity-70 hover:opacity-100 hover:text-pink-500'
+                      }`}
+                    >
+                      {link.label}
+                      {isActive && (
+                        <motion.div
+                          layoutId="nav-indicator"
+                          className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-gradient-to-r from-pink-500 to-purple-500"
+                        />
+                      )}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-          {/* Actions */}
-          <div className="flex items-center gap-3">
+          {/* Actions container */}
+          <div className="w-auto md:w-1/4 flex items-center justify-end gap-3">
             {/* Dark mode toggle */}
             <button
               onClick={toggleDark}
@@ -201,7 +205,7 @@ export default function Navbar() {
               <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.36 }}>
                 <button
                   onClick={() => scrollTo('#join')}
-                  className="btn-primary w-full justify-center mt-2"
+                  className="btn-primary w-full justify-center py-2.5 px-6 text-sm mt-2"
                 >
                   Join Us
                 </button>

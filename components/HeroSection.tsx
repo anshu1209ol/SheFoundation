@@ -100,11 +100,11 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-wrap gap-4 mb-14"
             >
-              <motion.button
+               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => document.getElementById('join')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary group"
+                className="btn-primary text-base px-8 py-3.5 group"
               >
                 Join Us
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -114,7 +114,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-secondary group flex items-center gap-2"
+                className="btn-secondary text-base px-8 py-3.5 group flex items-center gap-2"
               >
                 <div className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center group-hover:bg-white transition-colors">
                   <Play className="w-3 h-3 text-pink-500 fill-pink-500 ml-0.5" />
